@@ -8,7 +8,6 @@
 
 // A task runner configuration for gulp. Gulp provides a less task
 // which compiles less to css. 
-/*
 {
 	"version": "0.1.0",
 	"command": "gulp",
@@ -25,7 +24,7 @@
 		}
 	]
 }
-*/
+
 
 // Uncomment the following section to use gulp in a watching mode that compiles a
 // less file. The gulp task prints "[hh:mm:ss] Starting 'clean-styles'" to the console
@@ -33,7 +32,7 @@
 // overall less compilation has finished. When the clean pattern is detect internal less
 // problems are cleaned. When the finshed pattern is detected in the output less
 // problems are published.
-
+/*
 {
 	"version": "0.1.0",
 	"command": "gulp",
@@ -58,7 +57,7 @@
 		}
 	]
 }
-
+*/
 
 // Uncomment the following section to use jake to build a workspace
 // cloned from https://github.com/Microsoft/TypeScript.git
@@ -146,7 +145,8 @@
 /*
 {
 	"version": "0.1.0",
-	"command": "tsc.exe",
+	"command": "tsc",
+	"isShellCommand": true,
 	"args": ["HelloWorld.ts"],
 	"showOutput": "silent",
 	"problemMatcher": {

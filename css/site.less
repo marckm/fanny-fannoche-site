@@ -1,8 +1,101 @@
+@backgroundColor: white;
+@pageMaxWidth:1024px;
 
-nav li.menuButtonDark {
-	background-color: rgb(70,70,84);
-	
+@menuButtonQuestBackgroundColor: rgb(70,70,84);
+@menuButtonGalleryBackgroundColor: rgb(144,170,218);
+@menuButtonVideosBackgroundColor: rgb(251,165,251);
+@menuButtonShopBackgroundColor: rgb(246,198,204);
+@menuButtonBlogBackgroundColor: rgb(246,235,219);
+
+@menuButtonLightFontColor: #A29F9A;
+@menuButtonDarkFontColor: #4E4C4A;
+
+@menuButtonMargin:2px;
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: @pageMaxWidth;
+  }
+}
+
+nav li.menuButton {
+	width: (@pageMaxWidth / 5) - (@menuButtonMargin * 5);
+	font-family: 'Tangerine', serif;
+	font-size:24px;
+	font-weight: bold;
+	margin:@menuButtonMargin;
+	border-radius: 2px;
+	border-width:  2px;
+	border-style: solid;
+	text-align: center;
+}
+
+nav li.menuButtonQuest {
+	background-color: @menuButtonQuestBackgroundColor;
+	border-color: @menuButtonQuestBackgroundColor;
+	&:hover {
+		border-color:lighten(@menuButtonQuestBackgroundColor, 10%);
+	}
 	a {
-		color:#a29f9A;
+		color:@menuButtonLightFontColor;
+		&:hover {
+			background-color:lighten(@menuButtonQuestBackgroundColor, 10%);
+		}
+	}
+}
+
+nav li.menuButtonGallery {
+	background-color: @menuButtonGalleryBackgroundColor;
+	border-color: @menuButtonGalleryBackgroundColor;
+	&:hover {
+		border-color:lighten(@menuButtonGalleryBackgroundColor, 10%);
+	}
+	a {
+		color:@menuButtonDarkFontColor;
+		&:hover {
+			background-color: lighten(@menuButtonGalleryBackgroundColor, 10%);
+		}
+	}
+}
+
+nav li.menuButtonVideos {
+	background-color: @menuButtonVideosBackgroundColor;
+	border-color: @menuButtonVideosBackgroundColor;
+	&:hover {
+		border-color:lighten(@menuButtonVideosBackgroundColor, 10%);
+	}
+	a {
+		color:@menuButtonDarkFontColor;
+		&:hover {
+			background-color: lighten(@menuButtonVideosBackgroundColor, 10%);
+		}
+	}
+}
+nav li.menuButtonShop {
+	background-color: @menuButtonShopBackgroundColor;
+	border-color: @menuButtonShopBackgroundColor;
+	&:hover {
+		border-color:lighten(@menuButtonShopBackgroundColor, 10%);
+	}
+	a {
+		color:@menuButtonDarkFontColor;
+		&:hover {
+			background-color: lighten(@menuButtonShopBackgroundColor, 10%);
+		}
+	}
+}
+
+nav li.menuButtonBlog {
+	background-color: @menuButtonBlogBackgroundColor;
+	border-color: @menuButtonBlogBackgroundColor;
+	&:hover {
+		border-color:lighten(@menuButtonBlogBackgroundColor, 10%);
+	}
+	a {
+		color:@menuButtonDarkFontColor;
+		&:hover {
+			background-color: lighten(@menuButtonBlogBackgroundColor, 10%);
+		}
 	}
 }

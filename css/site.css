@@ -1,0 +1,82 @@
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+nav li.menuButton {
+  width: 194.8px;
+  font-family: 'Tangerine', serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 2px;
+  border-radius: 2px;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+}
+nav li.menuButtonQuest {
+  background-color: #464654;
+  border-color: #464654;
+}
+nav li.menuButtonQuest:hover {
+  border-color: #5d5d70;
+}
+nav li.menuButtonQuest a {
+  color: #a29f9a;
+}
+nav li.menuButtonQuest a:hover {
+  background-color: #5d5d70;
+}
+nav li.menuButtonGallery {
+  background-color: #90aada;
+  border-color: #90aada;
+}
+nav li.menuButtonGallery:hover {
+  border-color: #b6c7e7;
+}
+nav li.menuButtonGallery a {
+  color: #4e4c4a;
+}
+nav li.menuButtonGallery a:hover {
+  background-color: #b6c7e7;
+}
+nav li.menuButtonVideos {
+  background-color: #fba5fb;
+  border-color: #fba5fb;
+}
+nav li.menuButtonVideos:hover {
+  border-color: #fdd6fd;
+}
+nav li.menuButtonVideos a {
+  color: #4e4c4a;
+}
+nav li.menuButtonVideos a:hover {
+  background-color: #fdd6fd;
+}
+nav li.menuButtonShop {
+  background-color: #f6c6cc;
+  border-color: #f6c6cc;
+}
+nav li.menuButtonShop:hover {
+  border-color: #fdf2f3;
+}
+nav li.menuButtonShop a {
+  color: #4e4c4a;
+}
+nav li.menuButtonShop a:hover {
+  background-color: #fdf2f3;
+}
+nav li.menuButtonBlog {
+  background-color: #f6ebdb;
+  border-color: #f6ebdb;
+}
+nav li.menuButtonBlog:hover {
+  border-color: #ffffff;
+}
+nav li.menuButtonBlog a {
+  color: #4e4c4a;
+}
+nav li.menuButtonBlog a:hover {
+  background-color: #ffffff;
+}

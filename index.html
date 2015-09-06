@@ -1,89 +1,122 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Fanny Fannoche">
-    <meta name="author" content="Fanny Fannoche">
-    <link rel="icon" href="favicon.ico">
-      <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<!DOCTYPE html>
+<html lang="en">
 
-    <title>Fanny Fannoche</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/site.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/jumbotron-narrow.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="Fanny Fannoche">
+  <meta name="author" content="Fanny Fannoche">
+  <link rel="icon" href="favicon.ico">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <title>Fanny Fannoche</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/site.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/jumbotron-narrow.css" rel="stylesheet">
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]>
+      <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+    <![endif]-->
+  <script src="js/ie-emulation-modes-warning.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
-    
-  </head>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine" />
+</head>
 
-  <body>
+<body>
+  <div class="banner">
+  </div>
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills">
-            <li role="presentation" class="menuButton menuButtonQuest"><a href="#">Qu&ecirc;te</a></li>
-            <li role="presentation" class="menuButton menuButtonGallery"><a href="#">Galleries</a></li>
-            <li role="presentation" class="menuButton menuButtonVideos"><a href="#">Vid&eacute;os</a></li>
-            <li role="presentation" class="menuButton menuButtonShop"><a href="#">Boutique</a></li>
-            <li role="presentation" class="menuButton menuButtonBlog"><a href="http://oni-manele.blogspot.com" target="_blank">Blog</a></li>
-          </ul>
-        </nav>
+  <div class="container">
+    <div class="header clearfix">
+
+      <nav>
+        <ul class="nav nav-pills">
+          <li role="presentation" class="menuButton menuButtonQuest"><a href="#quest">Qu&ecirc;te</a>
+          </li>
+          <li role="presentation" class="menuButton menuButtonGallery"><a href="#gallery">Galleries</a>
+          </li>
+          <li role="presentation" class="menuButton menuButtonVideos"> <a href="#videos">Vid&eacute;os</a>
+          </li>
+          <li role="presentation" class="menuButton menuButtonShop"><a href="#shop">Boutique</a>
+          </li>
+          <li role="presentation" class="menuButton menuButtonBlog"> <a href="http://oni-manele.blogspot.com" target="_blank">Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page" id="page"></div>
+  </div>
+
+  <footer class="footer">
+    <p>© Fanny Fannoche - 2015</p>
+  </footer>
+  </div>
+  <!-- /container -->
+  <script type="text/template" id="questTemplate">
+    <div class="jumbotron">
+      <h1>Jumbotron heading</h1>
+      <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+        condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+    </div>
+  </script>
+
+  <script type="text/template" id="galleryTemplate">
+    <div class="row marketing">
+      <div class="col-lg-6">
+        <h4>Subheading</h4>
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        <h4>Subheading</h4>
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+        <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
       </div>
 
-      <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+      <div class="col-lg-6">
+        <h4>Subheading</h4>
+        <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+
+        <h4>Subheading</h4>
+        <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+
+        <h4>Subheading</h4>
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
       </div>
+    </div>
+  </script>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-
-        <div class="col-lg-6">
-          <h4>Subheading</h4>
-          <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
+  <script type="text/template" id="shopTemplate">
+    <div class="row marketing">
+      <div class="col-lg-6">
+        <h4>Shop</h4>
       </div>
+    </div>
+  </script>
 
-      <footer class="footer">
-        <p>© Company 2014</p>
-      </footer>
+  <script type="text/template" id="videosTemplate">
+    <div class="row marketing">
+      <div class="col-lg-6">
+        <h4>Videos</h4>
+      </div>
+    </div>
+  </script>
 
-    </div> <!-- /container -->
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/app.js"></script>
+</body>
 
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  
-
-</body></html>
+</html>

@@ -143,3 +143,13 @@ nav li.menuButtonBlog a {
 nav li.menuButtonBlog a:hover {
   background-color: #ffffff;
 }
+img.carouselImage {
+  text-align: center;
+  width: auto;
+  height: 300px;
+  max-height: 300px;
+}
+img.galleryPicture {
+  width: 100px;
+  height: 100px;
+}

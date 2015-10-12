@@ -1,7 +1,7 @@
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: 1024px;
+    /*max-width: @pageMaxWidth;*/
   }
 }
 /* Space out content a bit */
@@ -10,13 +10,14 @@
   padding-bottom: 20px;
 }
 .banner {
-  background-image: url("../img/banner.jpg");
-  height: 233px;
-  background-size: cover;
+  background-color: black;
+  text-align: center;
+  height: 600px;
+}
+.banner img {
+  height: 600px;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.page,
 .footer {
   padding-right: 15px;
   padding-left: 15px;
@@ -67,81 +68,16 @@
     border-bottom: 0;
   }
 }
-nav li.menuButton {
-  width: 194.8px;
-  font-family: 'Tangerine', serif;
-  font-size: 24px;
-  font-weight: bold;
-  margin: 2px;
-  border-radius: 2px;
-  border-width: 2px;
-  border-style: solid;
+.navbar {
+  background: rgba(0, 0, 0, 0);
+}
+.navbar-nav {
+  width: 100%;
   text-align: center;
 }
-nav li.menuButtonQuest {
-  background-color: #464654;
-  border-color: #464654;
-}
-nav li.menuButtonQuest:hover {
-  border-color: #5d5d70;
-}
-nav li.menuButtonQuest a {
-  color: #a29f9a;
-}
-nav li.menuButtonQuest a:hover {
-  background-color: #5d5d70;
-}
-nav li.menuButtonGallery {
-  background-color: #90aada;
-  border-color: #90aada;
-}
-nav li.menuButtonGallery:hover {
-  border-color: #b6c7e7;
-}
-nav li.menuButtonGallery a {
-  color: #4e4c4a;
-}
-nav li.menuButtonGallery a:hover {
-  background-color: #b6c7e7;
-}
-nav li.menuButtonVideos {
-  background-color: #fba5fb;
-  border-color: #fba5fb;
-}
-nav li.menuButtonVideos:hover {
-  border-color: #fdd6fd;
-}
-nav li.menuButtonVideos a {
-  color: #4e4c4a;
-}
-nav li.menuButtonVideos a:hover {
-  background-color: #fdd6fd;
-}
-nav li.menuButtonShop {
-  background-color: #f6c6cc;
-  border-color: #f6c6cc;
-}
-nav li.menuButtonShop:hover {
-  border-color: #fdf2f3;
-}
-nav li.menuButtonShop a {
-  color: #4e4c4a;
-}
-nav li.menuButtonShop a:hover {
-  background-color: #fdf2f3;
-}
-nav li.menuButtonBlog {
-  background-color: #f6ebdb;
-  border-color: #f6ebdb;
-}
-nav li.menuButtonBlog:hover {
-  border-color: #ffffff;
-}
-nav li.menuButtonBlog a {
-  color: #4e4c4a;
-}
-nav li.menuButtonBlog a:hover {
-  background-color: #ffffff;
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
 }
 .galleryPictureContainer {
   text-align: center;
@@ -157,4 +93,36 @@ img.carouselImage {
 img.galleryPicture {
   width: 100px;
   height: 100px;
+}
+#slide1,
+#slide2,
+#slide3 {
+  color: white;
+  height: 1000px;
+}
+#slide1 {
+  background: url(../img/gallery/abstraits/abstrait1.jpg) center 0 no-repeat fixed;
+}
+#slide2 {
+  background: url(../img/gallery/abstraits/1001.jpg) center 0 no-repeat fixed;
+}
+#slide3 {
+  background: url(../img/gallery/abstraits/1002.jpg) center 0 no-repeat fixed;
+}
+/* Gestion du contenu */
+.slide_inside {
+  width: 980px;
+  margin: 0 auto;
+}
+#slide1 .slide_inside {
+  text-align: center;
+}
+#slide2 .slide_inside p {
+  width: 500px;
+  text-align: justify;
+}
+#slide3 .slide_inside {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 50px;
+  padding: 50px;
 }

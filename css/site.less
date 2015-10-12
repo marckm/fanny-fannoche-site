@@ -12,10 +12,12 @@
 
 @menuButtonMargin:2px;
 
+@bannerHeight: 600px;
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
-    max-width: @pageMaxWidth;
+    /*max-width: @pageMaxWidth;*/
   }
 }
 
@@ -26,16 +28,17 @@
 }
 
 .banner {
-	background-image: url("../img/banner.jpg");
-	height: 233px;
-	background-size:cover;
+	background-color: black;
+	text-align: center;
+  height: @bannerHeight;
+  
+  img {
+    height: @bannerHeight;
+  }
 }
 
-
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.page,
+
 .footer {
   padding-right: 15px;
   padding-left: 15px;
@@ -92,86 +95,20 @@
   }
 }
 
-nav li.menuButton {
-	width: (@pageMaxWidth / 5) - (@menuButtonMargin * 5);
-	font-family: 'Tangerine', serif;
-	font-size:24px;
-	font-weight: bold;
-	margin:@menuButtonMargin;
-	border-radius: 2px;
-	border-width:  2px;
-	border-style: solid;
-	text-align: center;
+.navbar {
+  background: rgba(0,0,0,0);
 }
 
-nav li.menuButtonQuest {
-	background-color: @menuButtonQuestBackgroundColor;
-	border-color: @menuButtonQuestBackgroundColor;
-	&:hover {
-		border-color:lighten(@menuButtonQuestBackgroundColor, 10%);
-	}
-	a {
-		color:@menuButtonLightFontColor;
-		&:hover {
-			background-color:lighten(@menuButtonQuestBackgroundColor, 10%);
-		}
-	}
-}
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
 
-nav li.menuButtonGallery {
-	background-color: @menuButtonGalleryBackgroundColor;
-	border-color: @menuButtonGalleryBackgroundColor;
-	&:hover {
-		border-color:lighten(@menuButtonGalleryBackgroundColor, 10%);
-	}
-	a {
-		color:@menuButtonDarkFontColor;
-		&:hover {
-			background-color: lighten(@menuButtonGalleryBackgroundColor, 10%);
-		}
-	}
-}
 
-nav li.menuButtonVideos {
-	background-color: @menuButtonVideosBackgroundColor;
-	border-color: @menuButtonVideosBackgroundColor;
-	&:hover {
-		border-color:lighten(@menuButtonVideosBackgroundColor, 10%);
-	}
-	a {
-		color:@menuButtonDarkFontColor;
-		&:hover {
-			background-color: lighten(@menuButtonVideosBackgroundColor, 10%);
-		}
-	}
-}
-nav li.menuButtonShop {
-	background-color: @menuButtonShopBackgroundColor;
-	border-color: @menuButtonShopBackgroundColor;
-	&:hover {
-		border-color:lighten(@menuButtonShopBackgroundColor, 10%);
-	}
-	a {
-		color:@menuButtonDarkFontColor;
-		&:hover {
-			background-color: lighten(@menuButtonShopBackgroundColor, 10%);
-		}
-	}
-}
-
-nav li.menuButtonBlog {
-	background-color: @menuButtonBlogBackgroundColor;
-	border-color: @menuButtonBlogBackgroundColor;
-	&:hover {
-		border-color:lighten(@menuButtonBlogBackgroundColor, 10%);
-	}
-	a {
-		color:@menuButtonDarkFontColor;
-		&:hover {
-			background-color: lighten(@menuButtonBlogBackgroundColor, 10%);
-		}
-	}
-}
 
 .galleryPictureContainer{
 	text-align: center;
@@ -189,4 +126,42 @@ img.carouselImage {
 img.galleryPicture {
 	width: 100px;
 	height: 100px;
+}
+
+#slide1, #slide2, #slide3 {
+	color:white;
+	height: 1000px;
+}
+
+#slide1 {
+	background:url(../img/gallery/abstraits/abstrait1.jpg) center 0 no-repeat fixed;	
+}
+
+#slide2 {
+	background:url(../img/gallery/abstraits/1001.jpg) center 0 no-repeat fixed;	
+}
+
+#slide3 {
+	background:url(../img/gallery/abstraits/1002.jpg) center 0 no-repeat fixed;	
+}
+
+/* Gestion du contenu */
+.slide_inside {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#slide1  .slide_inside {
+	text-align:center;
+}
+
+#slide2 .slide_inside p {
+	width: 500px;
+	text-align:justify;
+}
+
+#slide3 .slide_inside {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top:50px;
+	padding:50px;
 }

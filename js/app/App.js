@@ -22,6 +22,7 @@
 		},
 		home: function () {
 			var view = new App.BaseView({ templateId: '#questTemplate' });
+			
 		},
 		showGallery: function () {
 			var pictures = new App.Gallery();

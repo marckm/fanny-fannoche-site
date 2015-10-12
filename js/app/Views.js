@@ -13,7 +13,7 @@
 			this.$el.html(compiledTemplate({}));
 			return this;
 		}
-	});
+	}); 
 
 	App.GalleryView = Backbone.View.extend({
 		el: '#page',

@@ -69,7 +69,11 @@
 	});
 
 	App.PictureView = Backbone.View.extend({
+		events: {
+			"click": "selectImage"	
+		},
 		tagName:"li",
+		className:'galleryPictureContainer',
 		template: '#pictureViewTemplate',
 		render: function () {
 			var templateId = this.template;
@@ -77,6 +81,10 @@
 			this.$el.empty();
 			this.$el.append(compiledTemplate(this.model.toJSON()));
 			return this;
+		},
+		selectImage: function(){
+			var imageIndex = this.model.get('imageIndex');
+			$('.carousel').carousel(imageIndex);
 		}
 	});
 })();

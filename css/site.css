@@ -143,6 +143,11 @@ nav li.menuButtonBlog a {
 nav li.menuButtonBlog a:hover {
   background-color: #ffffff;
 }
+.galleryPictureContainer {
+  text-align: center;
+  vertical-align: top;
+  width: 160px;
+}
 img.carouselImage {
   text-align: center;
   width: auto;

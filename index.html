@@ -28,23 +28,26 @@
     <img src="img/landing.png" />
   </div>
 
-  <nav class="navbar navbar-default" role="navigation">
+  <div id="nav-wrapper">
+    <nav class="navbar navbar-default navbar-transparent" role="navigation" id="nav">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <ul class="nav navbar-nav">
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <ul class="nav navbar-nav">
 
-      <li role="presentation"><a href="#quest">Qu&ecirc;te</a>
-      </li>
-      <li role="presentation"><a href="#gallery">Galleries</a>
-      </li>
-      <li role="presentation"> <a href="#videos">Vid&eacute;os</a>
-      </li>
-      <li role="presentation"><a href="#shop">Boutique</a>
-      </li>
-      <li role="presentation"> <a href="http://oni-manele.blogspot.com" target="_blank">Blog</a>
-      </li>
-    </ul>
-  </nav>
+        <li role="presentation"><a href="#quest">Qu&ecirc;te</a>
+        </li>
+        <li role="presentation"><a href="#gallery">Galleries</a>
+        </li>
+        <li role="presentation"> <a href="#videos">Vid&eacute;os</a>
+        </li>
+        <li role="presentation"><a href="#shop">Boutique</a>
+        </li>
+        <li role="presentation"> <a href="http://oni-manele.blogspot.com" target="_blank">Blog</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
   <div class="container-fluid">
 
     <div class="page" id="page"></div>
@@ -58,7 +61,7 @@
   <!-- /container -->
   <script type="text/template" id="questTemplate">
     <div class="slides">
-      <div id="slide1" class="slide">
+      <div id="slide1" class="quest-slide">
         <div class="slide_inside">
           <h2>Biographie Fanny</h2> Artiste techniques mixtes et procédés intuitifs
 
@@ -75,7 +78,7 @@
             consciemment mon évolution spirituelle personnelle. </p>
         </div>
       </div>
-      <div id="slide2" class="slide">
+      <div id="slide2" class="quest-slide">
         <div class="slide_inside">
           <h2>Le procédé intuitif</h2>
 
@@ -105,7 +108,7 @@ La peinture nous mène en des place inconnues où notre seule option est de trav
 
         </div>
       </div>
-      <div id="slide3" class="slide">
+      <div id="slide3" class="quest-slide">
         <div class="slide_inside">
           <p><em>* Le <strong>flow</strong>, littéralement le flux en anglais, est l'état mental atteint par une personne lorsqu'elle est complètement immergée dans ce qu'elle fait, dans un état maximal de concentration. Cette personne éprouve alors un sentiment d'<a href="fr.wikipedia.org/wiki/Engagement">engagement</a> total et de réussite. Ce concept, élaboré par le psychologue <a href="fr.wikipedia.org/wiki/Mihaly_Csikszentmihalyi">Mihaly Csikszentmihalyi</a>, se traduit également en français par les termes de « flux », d’« expérience-flux », d’« expérience optimale » ou de « <a href="fr.wikipedia.org/wiki/Néguentropie">néguentropie</a> psychique ». <u>Source : wikipédia.fr</u></em></p>
 
@@ -138,7 +141,7 @@ La peinture nous mène en des place inconnues où notre seule option est de trav
   </script>
 
   <script type="text/template" id="galleryTemplate">
-    <div class="row">
+    <div class="row-fluid">
       <h2>Abstraits</h2>
 
       <!-- caroussel -->
@@ -230,22 +233,13 @@ La peinture nous mène en des place inconnues où notre seule option est de trav
   <script type="text/javascript">
     $(document).ready(function() {
     
-    $(window).scroll(function (event) {
-    // A chaque fois que l'utilisateur va scroller (descendre la page)
-    var y = $(this).scrollTop(); // On récupérer la valeur du scroll vertical
- 
-    if (y >= 600) {
-      $('.navbar').addClass('navbar-fixed-top');
-      $('.navbar').addClass('navbar-sticky');
-      $('.container').addClass('container-fixed');
-    } else {
-      // sinon, on l'enlève
-      $('.navbar').removeClass('navbar-fixed-top');
-      $('.navbar').removeClass('navbar-sticky');
-      $('.container').removeClass('container-fixed');
-    }
-  });
+      $('#nav-wrapper').height($("#nav").height());
     
+      $('#nav').affix({
+          offset: { top: $('#nav').offset().top }
+      });
+      
+      // starts application
       App.run();
    });
   </script>

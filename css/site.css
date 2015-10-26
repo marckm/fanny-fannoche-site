@@ -1,11 +1,8 @@
-.page {
-  margin: 0px;
-}
 .container-fluid {
   padding: 0;
 }
 .container-fixed {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .banner {
   background-color: black;
@@ -30,6 +27,9 @@
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+.footer p {
+  text-align: center;
 }
 /* Main marketing message and sign up button */
 .jumbotron {
@@ -58,9 +58,16 @@
     border-bottom: 0;
   }
 }
-.navbar {
-  background: rgba(0, 0, 0, 0.1);
-  margin-bottom: 0;
+#nav.affix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#nav.affix .navbar-nav > li a {
+  color: gray;
+}
+.navbar-transparent {
+  background: rgba(255, 255, 255, 0.9);
 }
 .navbar-default .navbar-nav {
   width: 100%;
@@ -71,12 +78,6 @@
   display: inline-block;
 }
 .navbar-default .navbar-nav > li a {
-  color: gray;
-}
-.navbar-sticky {
-  background: #FFFFFF;
-}
-.navbar-sticky .navbar-nav > li a {
   color: gray;
 }
 .galleryPictureContainer {
@@ -94,11 +95,11 @@ img.galleryPicture {
   width: 100px;
   height: 100px;
 }
-.slide {
+.quest-slide {
   color: white;
   height: 600px;
   margin: 0;
-  float: left;
+  /* float:left; */
   width: 100%;
 }
 #slide1 {
@@ -111,25 +112,33 @@ img.galleryPicture {
 #slide3 {
   background: url(../img/gallery/abstraits/1002.jpg) 50% 0 no-repeat fixed;
 }
-/* Gestion du contenu */
 .slide_inside {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 80%;
-  margin: 0 auto;
-  padding: 1%;
+  padding-right: 1px;
+  padding-left: 1px;
 }
-#slide1 .slide_inside {
-  margin-top: 1%;
-  text-align: center;
-  width: 60%;
-}
-#slide2 .slide_inside {
-  width: 60%;
-}
-#slide2 .slide_inside p {
-  text-align: justify;
-}
-#slide3 .slide_inside {
-  margin-top: 2%;
-  padding: 2%;
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /* Gestion du contenu */
+  .slide_inside {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+  }
+  #slide1 .slide_inside {
+    margin-top: 1%;
+    text-align: center;
+    width: 60%;
+  }
+  #slide2 .slide_inside {
+    width: 60%;
+  }
+  #slide2 .slide_inside p {
+    text-align: justify;
+  }
+  #slide3 .slide_inside {
+    margin-top: 2%;
+    padding: 2%;
+  }
 }

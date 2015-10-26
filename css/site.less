@@ -14,17 +14,12 @@
 
 @bannerHeight: 600px;
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    /*max-width: @pageMaxWidth;*/
-  }
+.container-fluid {
+  padding:0;
 }
 
-/* Space out content a bit */
-.container {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.container-fixed {
+  margin-top: 30px;
 }
 
 .banner {
@@ -35,13 +30,6 @@
   img {
     height: @bannerHeight;
   }
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-
-.footer {
-  padding-right: 15px;
-  padding-left: 15px;
 }
 
 /* Custom page header */
@@ -60,10 +48,6 @@
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
@@ -96,19 +80,31 @@
 }
 
 .navbar {
-  background: rgba(0,0,0,0);
+  background: rgba(0,0,0,10%);
+  margin-bottom: 0;
 }
 
+
+  .navbar-default {
   .navbar-nav {
     width: 100%;
     text-align: center;
     > li {
       float: none;
       display: inline-block;
+      a {
+        color:gray;
+      }
     }
   }
+}
 
-
+.navbar-sticky {
+background: #FFFFFF;
+  .navbar-nav > li a {
+    color: gray;
+  }
+}
 
 .galleryPictureContainer{
 	text-align: center;
@@ -128,40 +124,50 @@ img.galleryPicture {
 	height: 100px;
 }
 
-#slide1, #slide2, #slide3 {
+.slide {
 	color:white;
-	height: 1000px;
+  height: 600px;
+  margin:0;
+  float:left;
+  width:100%
 }
 
 #slide1 {
-	background:url(../img/gallery/abstraits/abstrait1.jpg) center 0 no-repeat fixed;	
+	background:url(../img/gallery/abstraits/abstrait1.jpg) 50% 0 no-repeat fixed;	
 }
 
 #slide2 {
-	background:url(../img/gallery/abstraits/1001.jpg) center 0 no-repeat fixed;	
+	background:url(../img/gallery/abstraits/1001.jpg) 50% 0 no-repeat fixed;
+  height: 800px;
 }
 
 #slide3 {
-	background:url(../img/gallery/abstraits/1002.jpg) center 0 no-repeat fixed;	
+	background:url(../img/gallery/abstraits/1002.jpg) 50% 0 no-repeat fixed;	
 }
 
 /* Gestion du contenu */
 .slide_inside {
-	width: 980px;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 80%;
 	margin: 0 auto;
+  padding:1%;
 }
 
-#slide1  .slide_inside {
+#slide1 .slide_inside {
+  margin-top:1%;
 	text-align:center;
+	width: 60%;
 }
 
-#slide2 .slide_inside p {
-	width: 500px;
+#slide2 .slide_inside {
+	width: 60%;
+  
+  p {
 	text-align:justify;
+  }
 }
 
 #slide3 .slide_inside {
-	background-color: rgba(0, 0, 0, 0.5);
-	margin-top:50px;
-	padding:50px;
+	margin-top:2%;
+	padding:2%;
 }

@@ -86,13 +86,14 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index:2000;
     .navbar-nav > li a {
       color: gray;
     }
 }
 
 .navbar-transparent {
-    background: rgba(255,255,255,90%);
+    background: rgba(255,255,255,95%);
 }
 
 
@@ -116,11 +117,21 @@
 	width:160px; 
 }
 
+/*
 img.carouselImage {
 	text-align: center;
 	width: auto;
   	height: 300px;
   	max-height: 300px;
+}
+*/
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+  display: block;
+  height: auto;
+  max-height: 400px;
+  max-width: 100%;
+  line-height: 1;
+  width: auto; // Add this
 }
 
 img.galleryPicture {

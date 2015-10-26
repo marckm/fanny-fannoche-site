@@ -1,6 +1,7 @@
 (function () {
 
 	App = {
+		title: ' - Fannoche SheArtWild',
 		init: function () {	
 			// Initiate the router
 			var appRouter = new App.AppRouter;
@@ -21,10 +22,11 @@
 			'shop': 'showShop'
 		},
 		home: function () {
+			document.title = "Quest" + App.title;
 			var view = new App.BaseView({ templateId: '#questTemplate' });
-			
 		},
 		showGallery: function () {
+			document.title = "Gallery" + App.title;
 			var pictures = new App.Gallery();
 			pictures.fetch(
 				{
@@ -37,9 +39,11 @@
 				});
 		},
 		showShop: function () {
+			document.title = "Shop" + App.title;
 			var view = new App.BaseView({ templateId: '#shopTemplate' });
 		},
 		showVideos: function () {
+			document.title = "Videos" + App.title;
 			var view = new App.BaseView({ templateId: '#videosTemplate' });
 		}
 	});

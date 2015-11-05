@@ -64,21 +64,43 @@
   width: 100%;
   z-index: 2000;
 }
-#nav.affix .navbar-nav > li a {
-  color: gray;
-}
-.navbar-transparent {
-  background: rgba(255, 255, 255, 0.95);
-}
-.navbar-default .navbar-nav {
+nav .navbar-nav {
   width: 100%;
   text-align: center;
 }
-.navbar-default .navbar-nav > li {
+nav .navbar-nav > li {
   float: none;
   display: inline-block;
 }
-.navbar-default .navbar-nav > li a {
+nav.navbar-default {
+  background: rgba(255, 255, 255, 0.95);
+}
+nav.navbar-inverse {
+  background: black;
+  border-radius: 0;
+}
+nav.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+nav.navbar-inverse .navbar-nav > li > a:hover,
+nav.navbar-inverse .navbar-nav > li > a:active {
+  color: gray;
+}
+nav.navbar-inverse .navbar-nav > li > avisited,
+nav.navbar-inverse .navbar-nav > li > alink {
+  color: white;
+}
+nav.affix.navbar-inverse {
+  background: rgba(0, 0, 0, 0.8);
+}
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: white;
+}
+.navbar-default .navbar-nav > li.separator {
+  color: gray;
+}
+.navbar-inverse .navbar-nav > li.separator {
   color: gray;
 }
 .galleryPictureContainer {

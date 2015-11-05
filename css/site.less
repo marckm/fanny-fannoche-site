@@ -10,6 +10,12 @@
 @menuButtonLightFontColor: #A29F9A;
 @menuButtonDarkFontColor: #4E4C4A;
 
+@navbar-inverse-color: black;
+@navbar-inverse-color-affix:rgba(0, 0, 0, 0.8);
+
+@nav-link-focus: gray;
+@nav-link-default: white;
+
 @menuButtonMargin:2px;
 
 @bannerHeight: 600px;
@@ -23,7 +29,7 @@
 }
 
 .banner {
-	background-color: black;
+	background-color: @navbar-inverse-color;
 	text-align: center;
   height: @bannerHeight;
   
@@ -31,6 +37,7 @@
     height: @bannerHeight;
   }
 }
+
 
 /* Custom page header */
 .header {
@@ -87,28 +94,49 @@
     top: 0;
     width: 100%;
     z-index:2000;
-    .navbar-nav > li a {
-      color: gray;
-    }
-}
-
-.navbar-transparent {
-    background: rgba(255,255,255,95%);
 }
 
 
-  .navbar-default {
+nav {
   .navbar-nav {
     width: 100%;
     text-align: center;
     > li {
       float: none;
       display: inline-block;
-      a {
-        color:gray;
-      }
     }
   }
+}
+
+nav.navbar-default {
+    background: rgba(255,255,255,95%);
+  }
+  
+nav.navbar-inverse {
+    background: @navbar-inverse-color;
+    border-radius: 0;
+    
+    .navbar-nav>li>a {
+      color:@nav-link-default;
+      &:hover, &:active {color:@nav-link-focus;}    
+      &visited, &link {color:@nav-link-default;}    
+    }
+}
+
+nav.affix.navbar-inverse {
+    background: @navbar-inverse-color-affix;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+  color:white;
+}
+
+.navbar-default .navbar-nav > li.separator {
+  color:gray;
+}
+
+.navbar-inverse .navbar-nav > li.separator {
+  color:gray;
 }
 
 .galleryPictureContainer{

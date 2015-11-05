@@ -1,7 +1,7 @@
 (function () {
 
 	App = {
-		title: ' - Fannoche SheArtWild',
+		title: ' - SheArtWild',
 		init: function () {	
 			// Initiate the router
 			var appRouter = new App.AppRouter;

@@ -27,14 +27,14 @@
 		},
 		showGallery: function () {
 			document.title = "Gallery" + App.title;
-			var pictures = new App.Gallery();
-			pictures.fetch(
+			var galleries = new App.Gallery();
+			galleries.fetch(
 				{
 					success: function () {
-						var view = new App.GalleryView({ collection: pictures, templateId: '#galleryTemplate' });
+						var view = new App.GalleryView({ collection: galleries, templateId: '#galleryTemplate' });
 					},
 					error: function () {
-						alert('Error while loading images. Please refresh the page');
+						alert('Error while loading galleries. Please try to refresh the page.');
 					}
 				});
 		},

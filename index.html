@@ -39,15 +39,15 @@
         <li class="separator">/</li>
         <li role="presentation"><a href="#gallery">Galleries</a>
         </li>
-        
+
         <li class="separator">/</li>
         <li role="presentation"> <a href="#videos">Vid&eacute;os</a>
         </li>
-        
+
         <li class="separator">/</li>
         <li role="presentation"><a href="#shop">Boutique</a>
         </li>
-        
+
         <li class="separator">/</li>
         <li role="presentation"> <a href="http://blog.sheartwild.com/" target="_blank">Blog</a>
         </li>
@@ -85,7 +85,7 @@
             consciemment mon évolution spirituelle personnelle. </p>
         </div>
       </div>
-      
+
       <div id="slide2" class="quest-slide">
         <div class="slide_inside">
           <h2>Le procédé intuitif</h2>
@@ -148,36 +148,47 @@ La peinture nous mène en des place inconnues où notre seule option est de trav
     </script>
   </script>
 
-  <script type="text/template" id="galleryTemplate">
+ <script type="text/template" id="galleryTemplate">
+ 
+ </script>
+
+
+  <script type="text/template" id="carouselTemplate">
     <div class="row-fluid">
       <h2>Abstraits</h2>
 
-      <!-- caroussel -->
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators" id="carousel-indicators">
-        </ol>
+      <div class="col-md-6">
+        <!-- caroussel -->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators" id="carousel-indicators">
+          </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox" id="carousel-slides">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox" id="carousel-slides">
 
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
 
-      <hr />
-      <ul id="galleryPictures" class="list-inline">
-      </ul>
+      <div class="col-md-6">
+        <ul id="galleryPictures" class="list-inline">
+        </ul>
+      </div>
+
     </div>
+    <div class="clearfix"></div>
+    <br />
   </script>
 
   <script type="text/template" id="carouselItemTemplate">

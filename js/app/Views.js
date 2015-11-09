@@ -18,7 +18,36 @@
 	App.GalleryView = Backbone.View.extend({
 		el: '#page',
 		initialize: function (options) {
-			console.log("gallry view ctor");
+			this.options = options;
+			this.collection = options.collection;
+
+			this.collection.bind('reset', this.render);
+			this.render();
+		},
+		render: function(){
+			var that = this;
+			var templateId = this.options.templateId;
+			var compiledTemplate = _.template($(templateId).html());
+			
+			this.collection.forEach(function (carousel) {
+				var carouselTitle = carousel.get('title'); 
+				var pictures = new App.Carousel( { url: carousel.get('url') } );
+				pictures.fetch(
+				{
+					success: function () {
+						var view = new App.GalleryView({ collection: pictures, templateId: '#galleryTemplate' });
+						this.$el.append(view.render());
+					},
+					error: function () {
+						alert('Error while loading images. Please refresh the page');
+					}
+				});
+			});
+		}
+	});
+
+	App.CarouselView = Backbone.View.extend({
+		initialize: function (options) {
 			this.options = options;
 			this.collection = options.collection;
 

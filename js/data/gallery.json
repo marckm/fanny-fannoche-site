@@ -1,6 +1,10 @@
 [
 	{
-		'url': 'abstraits.json',
-		'title': 'Abstraits'
+		"url": "js/data/abstraits.json",
+		"title": "Abstraits"
+	},
+	{
+		"url": "js/data/collages.json",
+		"title": "Collages"
 	}
 ]

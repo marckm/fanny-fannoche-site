@@ -1,10 +1,12 @@
 [
 	{
 		"url": "js/data/abstraits.json",
-		"title": "Abstraits"
+		"title": "Abstraits",
+		"id": "abstraits"
 	},
 	{
 		"url": "js/data/collages.json",
-		"title": "Collages"
+		"title": "Collages",
+		"id":"collages"
 	}
 ]

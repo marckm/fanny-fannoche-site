@@ -29,24 +29,38 @@
 			var templateId = this.options.templateId;
 			var compiledTemplate = _.template($(templateId).html());
 			
+			this.$el.empty();
+			this.$el.append(compiledTemplate({}));
+			
 			this.collection.forEach(function (carousel) {
 				var carouselTitle = carousel.get('title'); 
-				var pictures = new App.Carousel( { url: carousel.get('url') } );
+				var carouselId = carousel.get('id'); 
+				var pictures = new App.Pictures( { url: carousel.get('url') } );
 				pictures.fetch(
 				{
 					success: function () {
-						var view = new App.GalleryView({ collection: pictures, templateId: '#galleryTemplate' });
-						this.$el.append(view.render());
+						var view = new App.CarouselView({
+							 collection: pictures, 
+							 templateId: '#carouselTemplate', 
+							 id:  carouselId,
+							 title: carouselTitle });
+						that.$el.append(view.render().el);
 					},
 					error: function () {
 						alert('Error while loading images. Please refresh the page');
 					}
 				});
 			});
+			
+			return this.$el;
 		}
 	});
 
 	App.CarouselView = Backbone.View.extend({
+		events: {
+			"click .left": "selectPrevious",
+			"click .right": "selectNext"
+		},
 		initialize: function (options) {
 			this.options = options;
 			this.collection = options.collection;
@@ -57,13 +71,20 @@
 		render: function () {
 			var that = this;
 			var templateId = this.options.templateId;
-			var compiledTemplate = _.template($(templateId).html());
+			var compiledTemplate = _.template( $(templateId).html());
 
 			this.$el.empty();
-			this.$el.append(compiledTemplate({}));
+			var templateHtml = compiledTemplate({})
+			this.$el.append(templateHtml);
+			
+			var carouselId = this.options.id;
+			
+			this.$el.find(".carouselTitle").html(this.options.title);
+			this.$el.find(".carousel").attr('id', carouselId);
 
 			this.collection.forEach(function (pic) {
 				var pictureView = new App.PictureView({
+					targetCarouselId: carouselId,
 					model: pic
 				});
 				var carouselItemView = new App.CarouselItemView({
@@ -82,6 +103,14 @@
 			this.$el.find('.carousel').carousel()
 
 			return this;
+		},
+		selectPrevious: function(e){
+			this.$el.find('.carousel').carousel('prev');
+			e.stopImmediatePropagation();
+		},
+		selectNext: function(e){
+			this.$el.find('.carousel').carousel('next');
+			e.stopImmediatePropagation();	
 		}
 	});
 	
@@ -104,6 +133,9 @@
 		tagName:"li",
 		className:'galleryPictureContainer',
 		template: '#pictureViewTemplate',
+		initialize: function (options) {
+			this.options = options;
+		},
 		render: function () {
 			var templateId = this.template;
 			var compiledTemplate = _.template($(templateId).html());
@@ -113,7 +145,8 @@
 		},
 		selectImage: function(){
 			var imageIndex = this.model.get('imageIndex');
-			$('.carousel').carousel(imageIndex);
+			var targetCarouselElement = '#' + this.options.targetCarouselId;
+			$(targetCarouselElement).carousel(imageIndex);
 		}
 	});
 })();
